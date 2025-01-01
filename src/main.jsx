@@ -44,21 +44,21 @@ const router = createBrowserRouter([
       {
         path: "/find-tutors",
         element: <FindTutors></FindTutors>,
-        loader: () => fetch('http://localhost:5000/tutorials'),
+        loader: () => fetch('https://language-exchange-server-xi.vercel.app/tutorials'),
       },
       {
         path: '/tutor/:id',
         element: <PrivateRoute>
           <Details></Details>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/tutorials/${params.id}`),
+        loader: ({ params }) => fetch(`https://language-exchange-server-xi.vercel.app/tutorials/${params.id}`),
       },
       {
         path: '/find-tutors/:language',
         element: <PrivateRoute>
           <Categories></Categories>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.language}`),
+        loader: ({ params }) => fetch(`https://language-exchange-server-xi.vercel.app/categories/${params.language}`),
       },
       {
         path: '/myTutorials',
@@ -77,7 +77,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <Update></Update>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/tutorials/${params.id}`),
+        loader: ({ params }) => fetch(`https://language-exchange-server-xi.vercel.app/tutorials/${params.id}`),
       },
       
 

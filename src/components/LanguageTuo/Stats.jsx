@@ -8,25 +8,25 @@ const Stats = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/tutors")
+        fetch("https://language-exchange-server-xi.vercel.app/tutors")
             .then(response => response.json())
             .then(data => setTutors(data))
     }, [])
 
     useEffect(() => {
-        fetch("http://localhost:5000/tutorials")
+        fetch("https://language-exchange-server-xi.vercel.app/tutorials")
             .then(response => response.json())
             .then(data => setTutorials(data))
     }, [])
 
     useEffect(() => {
-        fetch("http://localhost:5000/categories")
+        fetch("https://language-exchange-server-xi.vercel.app/categories")
             .then(response => response.json())
             .then(data => setLanguages(data))
     }, [])
 
     useEffect(() => {
-        fetch("http://localhost:5000/users")
+        fetch("https://language-exchange-server-xi.vercel.app/users")
             .then(response => response.json())
             .then(data => setUsers(data))
     }, [])

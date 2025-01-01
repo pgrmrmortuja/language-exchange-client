@@ -32,7 +32,7 @@ const AddTutorial = () => {
         console.log(newTutorial);
 
         //send data to the server
-        fetch('http://localhost:5000/tutorials', {
+        fetch('https://language-exchange-server-xi.vercel.app/tutorials', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -34,7 +34,7 @@ const Update = () => {
         console.log(update);
 
         //send data to the server
-        fetch(`http://localhost:5000/tutorials/${_id}`, {
+        fetch(`https://language-exchange-server-xi.vercel.app/tutorials/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

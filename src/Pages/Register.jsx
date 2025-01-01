@@ -47,7 +47,7 @@ const Register = () => {
                 const newUser = { name, email };
 
                 
-                fetch('http://localhost:5000/users', {
+                fetch('https://language-exchange-server-xi.vercel.app/users', {
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json'
@@ -90,7 +90,7 @@ const Register = () => {
                 const newUser = { name: user.displayName, email: user.email };
 
                 
-                fetch('http://localhost:5000/users', {
+                fetch('https://language-exchange-server-xi.vercel.app/users', {
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json'

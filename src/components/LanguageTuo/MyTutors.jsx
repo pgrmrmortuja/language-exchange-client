@@ -20,7 +20,7 @@ const MyTutors = ({ loadedTutors, setTutors, tutors }) => {
         //     return;
         // }
 
-        fetch(`http://localhost:5000/review/${tutorId}`, {
+        fetch(`https://language-exchange-server-xi.vercel.app/review/${tutorId}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

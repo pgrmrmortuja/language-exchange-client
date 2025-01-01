@@ -6,7 +6,7 @@ const LimitTutorials = () => {
     const [limits, setLimits] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/tutorials-limited?limit=6')
+        fetch('https://language-exchange-server-xi.vercel.app/tutorials-limited?limit=6')
             .then(res => res.json())
             .then(data => setLimits(data))
             .catch(error => console.log(error))

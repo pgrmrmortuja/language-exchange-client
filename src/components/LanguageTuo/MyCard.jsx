@@ -16,7 +16,7 @@ const MyCard = ({ loadedTutorial, setTutorials, tutorials }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/tutorials/${_id}`, {
+                fetch(`https://language-exchange-server-xi.vercel.app/tutorials/${_id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())

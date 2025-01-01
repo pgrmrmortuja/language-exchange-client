@@ -13,15 +13,15 @@ const MyTutorials = () => {
     const { user } = useContext(AuthContext);
 
     useEffect(() => {
-        // fetch(`http://localhost:5000/myTutorials/${user?.email}`)
+        // fetch(`https://language-exchange-server-xi.vercel.app/myTutorials/${user?.email}`)
         //     .then(res => res.json())
         //     .then(data => setTutorials(data))
         //     .catch(error => console.log(error))
 
-        axios.get(`http://localhost:5000/myTutorials/${user?.email}`, {
+        axios.get(`https://language-exchange-server-xi.vercel.app/myTutorials/${user?.email}`, {
             withCredentials: true
         })
-            .then(res => setJobs(res.data))
+            .then(res => setTutorials(res.data))
 
     }, [user?.email]);
 

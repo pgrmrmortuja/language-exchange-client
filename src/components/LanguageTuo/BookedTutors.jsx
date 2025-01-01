@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import MyTutors from './MyTutors';
+import axios from 'axios';
 
 const BookedTutors = () => {
 
@@ -14,10 +15,16 @@ const BookedTutors = () => {
     console.log(user?.email);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myTutors/${user?.email}`)
-            .then(res => res.json())
-            .then(data => setTutors(data))
-            .catch(error => console.log(error))
+        // fetch(`https://language-exchange-server-xi.vercel.app/myTutors/${user?.email}`)
+        //     .then(res => res.json())
+        //     .then(data => setTutors(data))
+        //     .catch(error => console.log(error))
+
+        axios.get(`https://language-exchange-server-xi.vercel.app/myTutors/${user?.email}`, {
+            withCredentials: true
+        })
+            .then(res => setTutors(res.data))
+
     }, [user?.email])
 
 

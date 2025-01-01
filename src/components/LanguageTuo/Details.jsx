@@ -24,7 +24,7 @@ const Details = () => {
         event.preventDefault();
 
         //send data to the server
-        fetch('http://localhost:5000/booked-tutors', {
+        fetch('https://language-exchange-server-xi.vercel.app/booked-tutors', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
