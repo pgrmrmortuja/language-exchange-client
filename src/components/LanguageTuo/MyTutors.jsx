@@ -67,14 +67,10 @@ const MyTutors = ({ loadedTutors, setTutors, tutors }) => {
                 <h2 className="card-title">{tutorName}</h2>
                 <p>Language: {language}</p>
                 <p>Price: ${price}</p>
-                {/* <div className="flex gap-3 items-center">
-                    <Rating style={{ maxWidth: 120 }} readOnly value={review} />
-                    <span className="text-lg">{review}</span>
-                </div> */}
                 <p>Review: {review}</p>
                 <div className="card-actions mt-3 justify-center sm:justify-center md:justify-start lg:justify-start">
 
-                    <button onClick={handleReview} className="btn  bg-green-500 text-black hover:text-green-400 border-none">Review</button>
+                    <button onClick={handleReview} className="btn  bg-green-500 text-black hover:text-green-400 border-none">Give Review</button>
                 </div>
             </div>
         </div>
