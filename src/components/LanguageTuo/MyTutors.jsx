@@ -65,7 +65,7 @@ const MyTutors = ({ loadedTutors, setTutors, tutors }) => {
             </figure>
             <div className="card-body flex flex-grow justify-end ml-4">
                 <h2 className="card-title">{tutorName}</h2>
-                <p><span>Language:</span> {language}</p>
+                <p><span className='font-bold'>Language:</span> {language}</p>
                 <p>Price: ${price}</p>
                 <p>Review: {review}</p>
                 <div className="card-actions mt-3 justify-center sm:justify-center md:justify-start lg:justify-start">
