@@ -31,7 +31,7 @@ const Categories = () => {
                                 
                                 <div className="card-actions justify-start">
                                     <Link to={'/'}>
-                                        <button className="btn border-green-700 bg-green-300 hover:text-green-400 border-none">Back Home</button>
+                                        <button className="btn border-green-700 bg-green-300 hover:text-green-400 border-none text-black">Back Home</button>
                                     </Link>
                                 </div>
                             </div>
