@@ -1,35 +1,48 @@
-# EquiSports - A Sports Equipment Store
+# LinguaConnect - A Language Exchange Platform  
+**Learn Language in a Friendly Atmosphere**  
 
-**Client Side Live:** [EquiSports Client](https://sportseqp.netlify.app/)
+## Purpose  
+The Language Exchange Platform is an online tutor booking application designed to connect users with professional tutors across various languages. The platform simplifies finding, reviewing, and booking tutors through an intuitive interface, making global learning accessible and enjoyable.
 
-**Server:** [EquiSports Server](https://sports-equipments-server-lovat.vercel.app/)
+## Live URL  
+[Visit Live Site](https://lingua-connect.netlify.app)  
 
-## 🌟 Features
+## Key Features  
+- **Responsive Design**: Optimized for mobile, tablet, and desktop users.  
+- **User Authentication**: Email/password and Google sign-in powered by Firebase.  
+- **Secure Data**: Firebase and MongoDB credentials secured using environment variables.  
+- **Dynamic Home Page**:  
+  - **Banner Section**: Engaging carousel.  
+  - **Stats Section**: Displays counts of tutors, reviews, languages, and users.  
+  - **Language Categories**: Interactive cards with logos and titles, linking to respective tutor pages.  
+- **Find Tutors**: View tutor profiles with filtering and search functionalities.  
+- **Tutor Details**: Book sessions with tutors and save details securely to the database.  
+- **Manage Tutorials**: Add, view, update, and delete tutorials via intuitive forms and tables.  
+- **Booking Management**: View booked tutors and add reviews dynamically.  
+- **JWT Authentication**: Secure private routes with JSON Web Tokens.  
+- **Dark/Light Theme**: Switch between themes seamlessly from the navbar.  
+- **Error Handling**: Error pages for invalid routes and comprehensive loading states.  
+- **Optional Enhancements**:  
+  - Implemented animations with Framer Motion.  
+  - Pagination for tutors (6-9 per page).  
 
-- **User Authentication:**  
-  Secure login and registration with Firebase Authentication. Supports email/password and social login (Google). Logged-in users see their profile with photo and display name, along with a "Log Out" button.
+## Tech Stack  
+### Frontend  
+- **React**: Component-based UI development.  
+- **Tailwind CSS**: Utility-first styling for rapid design.  
+- **React Router**: Efficient routing for dynamic pages.  
 
-- **Responsive Design:**  
-  Fully responsive across all devices: mobile, tablet, and desktop. Designed with Tailwind CSS and DaisyUI for a modern, unique look.
+### Backend  
+- **Node.js & Express.js**: RESTful API and server logic.  
+- **MongoDB Atlas**: Secure and scalable database.  
+- **JWT**: User authentication and route protection.  
 
-- **Product Management:**  
-  Users can add sports equipment with detailed specifications (image, name, category, price, stock status, and more). Includes a "My Equipment List" feature for managing (updating or deleting) user-added products.
-
-- **Interactive Functionalities:**  
-  Sort products by price on the "All Sports Equipment" page. Dark/Light theme toggle available on the homepage. Confirmation modals for critical actions like deleting products.
-
-- **Dynamic Pages:**  
-  Private routes for adding, viewing, and managing user-specific products. A dynamic "View Details" page showcasing all product details in an attractive format.
-
-- **Enhanced User Experience:**  
-  Smooth animations and tooltips with Lottie React and React Awesome Reveal. Meaningful toasts for error and success messages, avoiding default alerts.
-
-## 🚀 Technologies Used
-
-- **Frontend:** React, React Router, React Awesome Reveal, React Tooltip, Tailwind CSS, DaisyUI
-- **Backend:** Node.js, Express.js, MongoDB Atlas
-- **Authentication:** Firebase
-- **Deployment:**  
-  - Client: Netlify  
-  - Server: Vercel
+### Tools & Packages  
+- Axios  
+- Firebase  
+- dotenv
+- DaisyUi
+- Tailwind CSS
+- React Router
+  
 
