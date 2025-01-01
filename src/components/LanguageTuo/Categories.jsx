@@ -25,7 +25,7 @@ const Categories = () => {
                             <div className="card-body flex flex-grow justify-end ml-4">
                                 <h2 className="card-title">{category.username}</h2>
                                 <p>Category: {category.language}</p>
-                                <p>Price: ${category.price}</p>
+                                <p><span className='font-bold'>Price:</span> ${category.price}</p>
                                 <p>{category.description}</p>
                                 <p><span className='font-bold'>Review:</span> {category.review}</p>
                                 
