@@ -15,7 +15,7 @@ const Categories = () => {
                 {
                     categories.map(category =>
 
-                        <div key={category._id} className="card bg-base-100 w-96 shadow-xl">
+                        <div key={category._id} className="card bg-base-100 w-96 shadow-xl border-2 border-green-500">
                             <figure className="px-10 pt-10">
                                 <img
                                     src={category.userPhoto}
