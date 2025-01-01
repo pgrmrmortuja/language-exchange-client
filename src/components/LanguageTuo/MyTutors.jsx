@@ -67,7 +67,7 @@ const MyTutors = ({ loadedTutors, setTutors, tutors }) => {
                 <h2 className="card-title">{tutorName}</h2>
                 <p><span className='font-bold'>Language:</span> {language}</p>
                 <p><span className='font-bold'>Price:</span> ${price}</p>
-                <p>Review: {review}</p>
+                <p><span className='font-bold'>Review:</span> {review}</p>
                 <div className="card-actions mt-3 justify-center sm:justify-center md:justify-start lg:justify-start">
 
                     <button onClick={handleReview} className="btn  bg-green-500 text-black hover:text-green-400 border-none">Give Review</button>
