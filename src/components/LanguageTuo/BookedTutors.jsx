@@ -13,12 +13,12 @@ const BookedTutors = () => {
     const { user } = useContext(AuthContext);
     console.log(user?.email);
 
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/myTutors/${user?.email}`)
-    //         .then(res => res.json())
-    //         .then(data => setTutors(data))
-    //         .catch(error => console.log(error))
-    // }, [user?.email])
+    useEffect(() => {
+        fetch(`http://localhost:5000/myTutors/${user?.email}`)
+            .then(res => res.json())
+            .then(data => setTutors(data))
+            .catch(error => console.log(error))
+    }, [user?.email])
 
 
 
