@@ -11,6 +11,7 @@ import {
 import app from "../firebase/firebase.init";
 import { GoogleAuthProvider } from "firebase/auth";
 import { setPersistence, browserLocalPersistence } from "firebase/auth";
+import axios from "axios";
 
 
 export const AuthContext = createContext();
@@ -45,26 +46,42 @@ const AuthProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth,
-            (currentUser) => {
-                setUser(currentUser);
+        const unsubscribe = onAuthStateChanged(auth, currentUser => {
+            setUser(currentUser);
+            console.log('state captured', currentUser?.email);
 
-                setLoading(false);
+            if (currentUser?.email) {
+                const user = { email: currentUser.email };
+
+                axios.post('http://localhost:5000/jwt', user, { withCredentials: true })
+                    .then(res => {
+                        console.log('login token', res.data);
+                        setLoading(false);
+                    })
+            }
+            else {
+                axios.post('http://localhost:5000/logout', {}, {
+                    withCredentials: true
+                })
+                    .then(res => {
+                        console.log('logout', res.data)
+                        setLoading(false);
+                    })
             }
 
-        );
+        })
 
         return () => {
             unsubscribe();
         }
-    }, []);
+    }, [])
 
 
     const updateUserProfile = (updateData) => {
         return updateProfile(auth.currentUser, updateData);
     }
 
-    
+
     const logOut = () => {
         setLoading(true);
         return signOut(auth);

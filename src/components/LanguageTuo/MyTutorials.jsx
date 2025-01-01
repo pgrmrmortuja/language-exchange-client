@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import MyCard from './MyCard';
+import axios from 'axios';
 
 const MyTutorials = () => {
     const [tutorials, setTutorials] = useState([]);
@@ -12,11 +13,18 @@ const MyTutorials = () => {
     const { user } = useContext(AuthContext);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myTutorials/${user?.email}`)
-            .then(res => res.json())
-            .then(data => setTutorials(data))
-            .catch(error => console.log(error))
+        // fetch(`http://localhost:5000/myTutorials/${user?.email}`)
+        //     .then(res => res.json())
+        //     .then(data => setTutorials(data))
+        //     .catch(error => console.log(error))
+
+        axios.get(`http://localhost:5000/myTutorials/${user?.email}`, {
+            withCredentials: true
+        })
+            .then(res => setJobs(res.data))
+
     }, [user?.email]);
+
 
     return (
         <div className='mb-10'>
