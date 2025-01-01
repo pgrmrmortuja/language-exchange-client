@@ -5,10 +5,6 @@ import '@smastrom/react-rating/style.css';
 
 const Categories = () => {
 
-    /*name, image,language,
-price, review, details
- */
-
     const categories = useLoaderData();
     const catgName = categories[0].language;
 
