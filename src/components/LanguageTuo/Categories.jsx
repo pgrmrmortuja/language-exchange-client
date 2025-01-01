@@ -27,10 +27,8 @@ const Categories = () => {
                                 <p>Category: {category.language}</p>
                                 <p>Price: ${category.price}</p>
                                 <p>{category.description}</p>
-                                <div className="flex gap-3 items-center">
-                                    <Rating style={{ maxWidth: 120 }} readOnly value={category.review} />
-                                    <span className="text-lg">{category.review}</span>
-                                </div>
+                                <p><span className='font-bold'>Review:</span> {category.review}</p>
+                                
                                 <div className="card-actions justify-start">
                                     <Link to={'/'}>
                                         <button className="btn border-green-700 bg-green-300 hover:text-green-400 border-none">Back Home</button>
