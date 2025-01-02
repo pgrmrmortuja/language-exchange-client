@@ -15,8 +15,10 @@ import { LiaChalkboardTeacherSolid } from "react-icons/lia";
 const CatgSection = () => {
     return (
         <div className='mb-20'>
+            <h1 className="text-4xl font-bold mb-10 text-center">Choose Your Tutor</h1>
             
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-5'>
+                
                 {/* Card 1 */}
                 <Link to={"/find-tutors/English"}>
                     <div className="border-2 border-green-500 p-5 flex justify-between items-center hover:shadow-lg transition-shadow duration-300">

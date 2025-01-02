@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Slider from '../../components/Slider';
 import Choose from '../../components/Choose';
 import LimitTutorials from '../../components/LanguageTuo/LimitTutorials';
@@ -13,12 +13,20 @@ const HomeLayout = () => {
         document.title = "LinguaConnect | Home";
     }, []);
 
+    const chooseRef = useRef(null);
+
+    const scrollToChoose = () => {
+        chooseRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <div>
-            <Slider></Slider>
-            <Choose></Choose>
+            <Slider onGetStartedClick={scrollToChoose}></Slider>
             <Stats></Stats>
-            <CatgSection></CatgSection>
+            <div ref={chooseRef}>
+                <CatgSection></CatgSection>
+            </div>
+            <Choose></Choose>
             <LimitTutorials></LimitTutorials>
 
         </div>

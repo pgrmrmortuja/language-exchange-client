@@ -41,8 +41,8 @@ const Stats = () => {
 
     return (
         <div className='mx-auto w-11/12 mb-16 mt-10'>
-            <h1 className="text-4xl font-bold mb-10 text-center">Choose Your Tutor</h1>
-            <div className="stats shadow flex flex-col sm:flex-col md:flex-row lg:flex-row">
+            
+            <div className="stats shadow border-2 border-green-500 flex flex-col sm:flex-col md:flex-row lg:flex-row">
                 <div className="stat place-items-center">
                     <div className="stat-value">{tutors.length}+</div>
                     <div className="stat-title">Experienced Tutors</div>
