@@ -49,7 +49,7 @@ const Details = () => {
 
 
     return (
-        <div className="container mx-auto p-4">
+        <div className="w-11/12 mx-auto p-4">
             <h2 className="text-center text-3xl font-bold mb-5">Tutor Details</h2>
             <div className="hero bg-base-200 border-2 border-green-500 p-5 sm:p-10 rounded-lg">
                 <div className="hero-content flex flex-col md:flex-row items-center gap-5">

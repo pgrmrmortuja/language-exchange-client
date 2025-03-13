@@ -3,7 +3,7 @@ import { FaLanguage, FaChalkboardTeacher, FaRegSmile, FaHandsHelping } from 'rea
 
 const Choose = () => {
     return (
-        <div className='mx-auto w-11/12 mb-16'>
+        <div className='mb-16'>
 
             <div className="mt-10">
                 <h3 className="text-4xl font-bold text-center mb-4">Why LinguaConnect ?</h3>

@@ -16,10 +16,10 @@ const LimitTutorials = () => {
     return (
         <div className='mb-20'>
             <h2 className="text-center text-4xl font-bold p-2 mb-10">Top Tutorials</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-5'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5'>
                 {
                     limits.map(limit =>
-                        <div key={limit._id} className="card border-2 border-green-500 bg-base-100 w-96 shadow-xl">
+                        <div key={limit._id} className="card border-2 border-green-500 bg-base-100  shadow-xl">
                             <figure className="px-10 pt-10">
                                 <img
                                     src={limit.photo}

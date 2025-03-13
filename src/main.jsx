@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       {
         path: "/find-tutors",
         element: <FindTutors></FindTutors>,
-        loader: () => fetch('https://language-exchange-server-xi.vercel.app/tutorials'),
+        // loader: () => fetch('https://language-exchange-server-xi.vercel.app/tutorials'),
       },
       {
         path: '/tutor/:id',
@@ -79,7 +79,7 @@ const router = createBrowserRouter([
         </PrivateRoute>,
         loader: ({ params }) => fetch(`https://language-exchange-server-xi.vercel.app/tutorials/${params.id}`),
       },
-      
+
 
       {
         path: "/faq",
@@ -89,7 +89,7 @@ const router = createBrowserRouter([
         path: "/about",
         element: <AboutUs></AboutUs>,
       },
-      
+
     ]
   },
   {
@@ -104,7 +104,7 @@ const router = createBrowserRouter([
         path: "/auth/register",
         element: <Register></Register>,
       },
-    
+
     ],
   },
   {
@@ -117,7 +117,9 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
 
     <AuthProvider>
-      <RouterProvider router={router} />
+      <div className='w-full mx-auto overflow-x-hidden'>
+        <RouterProvider router={router} />
+      </div>
       <ToastContainer />
     </AuthProvider>
 

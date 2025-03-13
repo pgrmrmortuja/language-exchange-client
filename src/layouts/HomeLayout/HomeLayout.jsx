@@ -20,7 +20,7 @@ const HomeLayout = () => {
     };
 
     return (
-        <div>
+        <div className='w-11/12 mx-auto'>
             <Slider onGetStartedClick={scrollToChoose}></Slider>
             <Stats></Stats>
             <div ref={chooseRef}>

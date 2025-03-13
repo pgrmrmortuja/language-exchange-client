@@ -9,24 +9,18 @@ const MainLayout = () => {
     const navigation = useNavigation();
 
     return (
-        <div>
-            <header className='py-3 mb-5'>
-                <Navbar></Navbar>
-            </header>
+        <div >
+            <Navbar></Navbar>
 
             {
                 navigation.state === 'loading' ?
                     <Loading></Loading>
                     :
-                    <main className='container mx-auto'>
+                    <main className='w-11/12 mx-auto'>
                         <Outlet></Outlet>
                     </main>
             }
-
-
-            <footer>
-                <Footer></Footer>
-            </footer>
+            <Footer></Footer>
         </div>
     );
 };

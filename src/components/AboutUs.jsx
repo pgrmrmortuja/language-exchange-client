@@ -8,7 +8,7 @@ const AboutUs = () => {
 
     return (
         <div className="py-12 px-6">
-            <div className="max-w-6xl mx-auto text-center">
+            <div className="w-11/12 mx-auto text-center">
                 {/* Heading */}
                 <h2 className="text-4xl font-bold mb-6">
                     About Us

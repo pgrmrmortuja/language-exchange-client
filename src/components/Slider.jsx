@@ -5,7 +5,7 @@ import { Fade } from 'react-awesome-reveal';
 const Slider = ({ onGetStartedClick }) => {
 
     return (
-        <div className="w-11/12 mx-auto mb-14">
+        <div className="mt-10 mb-14">
             <div
                 className="hero h-64 md:h-[350px] lg:h-[550px]"
                 style={{
@@ -14,7 +14,7 @@ const Slider = ({ onGetStartedClick }) => {
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                 }}>
-                <div className="hero-overlay bg-opacity-10"></div>
+                {/* <div className="hero-overlay bg-opacity-10"></div> */}
                 <div className="hero-content text-neutral-content text-center">
                     <div className="w-full px-1 md:px-8 lg:px-12 xl:px-20">
                         <h1 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900">

@@ -31,7 +31,7 @@ const Navbar = () => {
 
   const linkClass = ({ isActive }) =>
     isActive
-      ? " p-2 text-green-700 rounded-lg hover:bg-transparent font-bold text-lg"
+      ? " p-2 text-green-500 rounded-lg hover:bg-transparent font-bold text-lg"
       : " p-2 rounded-lg hover:bg-transparent hover:text-green-500 hover:bg-green-300 font-bold text-lg text-black";
 
   const links = (
@@ -70,8 +70,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-green-200">
-      <div className="navbar container mx-auto  px-4">
+    <nav className="bg-green-200 bg-opacity-30 z-10 sticky top-0 w-full">
+      <div className="navbar px-4">
         {/* Start Section */}
         <div className="navbar-start">
           <div className="dropdown">
@@ -165,7 +165,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <Link to="/" className="text-xl md:text-2xl text-green-600 font-semibold">
+          <Link to="/" className="text-xl md:text-2xl text-green-500 font-semibold">
             LinguaConnect
           </Link>
         </div>

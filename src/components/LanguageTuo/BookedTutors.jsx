@@ -32,7 +32,7 @@ const BookedTutors = () => {
 
 
     return (
-        <div>
+        <div className='w-11/12 mx-auto'>
             <h1 className="text-4xl font-bold mb-5 text-center">My Booked Tutors</h1>
 
             {tutors.length === 0 ? (

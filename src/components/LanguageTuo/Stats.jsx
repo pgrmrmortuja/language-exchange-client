@@ -40,7 +40,7 @@ const Stats = () => {
 
 
     return (
-        <div className='mx-auto w-11/12 mb-16 mt-10'>
+        <div className='mb-16 mt-10'>
             
             <div className="stats shadow border-2 border-green-500 flex flex-col sm:flex-col md:flex-row lg:flex-row">
                 <div className="stat place-items-center">
