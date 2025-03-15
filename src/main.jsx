@@ -117,7 +117,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
 
     <AuthProvider>
-      <div className='overflow-x-hidden'>
+      <div className='max-w-screen-xl mx-auto overflow-clip'>
         <RouterProvider router={router} />
       </div>
       <ToastContainer />

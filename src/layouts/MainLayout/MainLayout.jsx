@@ -9,7 +9,8 @@ const MainLayout = () => {
     const navigation = useNavigation();
 
     return (
-        <div >
+        <div>
+            
             <Navbar></Navbar>
 
             {
