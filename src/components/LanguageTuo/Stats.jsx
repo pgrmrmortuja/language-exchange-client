@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
 
 const Stats = () => {
 
@@ -41,8 +42,13 @@ const Stats = () => {
 
     return (
         <div className='mb-16 mt-10'>
-            
-            <div className="stats shadow border-2 border-green-500 flex flex-col sm:flex-col md:flex-row lg:flex-row">
+
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: false, amount: 0.2 }}
+                className="stats shadow border-2 border-green-500 flex flex-col sm:flex-col md:flex-row lg:flex-row">
                 <div className="stat place-items-center">
                     <div className="stat-value">{tutors.length}+</div>
                     <div className="stat-title">Experienced Tutors</div>
@@ -61,7 +67,7 @@ const Stats = () => {
                 </div>
 
 
-            </div>
+            </motion.div>
         </div>
     );
 };
